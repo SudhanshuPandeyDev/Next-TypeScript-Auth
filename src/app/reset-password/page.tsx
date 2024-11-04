@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 export default function ResetPasswordPage() {
@@ -22,10 +21,8 @@ export default function ResetPasswordPage() {
         email,
         newPassword,
       });
-      toast.success(response.data.message || "Password reset successful!");
       router.push("/login");
     } catch (error: any) {
-      toast.error(error.response?.data?.message || "Error resetting password.");
     } finally {
       setLoading(false);
     }

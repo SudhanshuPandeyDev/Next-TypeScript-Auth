@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import toast from "react-hot-toast";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -11,7 +10,6 @@ export default function ForgotPasswordPage() {
     try {
       setLoading(true);
       await axios.post("/api/users/forgot-password", { email });
-      toast.success("Password reset email sent! Check your inbox.");
     } catch (error: any) {
       console.log("Error sending reset email", error.message);
     } finally {

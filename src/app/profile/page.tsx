@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
 import Link from "next/link";
-import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -12,11 +11,9 @@ export default function ProfilePage() {
   const logout = async () => {
     try {
       await axios.get("/api/users/logout");
-      toast.success("Logout successful");
       router.push("/login");
     } catch (error: any) {
       console.log(error.message);
-      toast.error(error.message);
     }
   };
 
@@ -27,7 +24,6 @@ export default function ProfilePage() {
       setData(res.data.data._id);
     } catch (error) {
       console.error("Error fetching user details:", error);
-      toast.error("Failed to fetch user details");
     }
   };
 
