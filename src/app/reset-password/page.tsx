@@ -13,7 +13,6 @@ export default function ResetPasswordPage() {
   const handleResetPassword = async () => {
     setLoading(true);
     const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get("token");
     const email = urlParams.get("email");
 
     try {
@@ -22,7 +21,9 @@ export default function ResetPasswordPage() {
         newPassword,
       });
       router.push("/login");
+      return response;
     } catch (error: any) {
+      console.log(error)
     } finally {
       setLoading(false);
     }
