@@ -34,6 +34,6 @@ export async function POST(request: NextRequest) {
       html: `<p>Click <a href="${resetLink}">here</a> to reset your password.</p> ${resetLink}`,
     });
   } catch (error) {
-    throw new Error("Error sending email");
+    console.log(error);
   }
 }
