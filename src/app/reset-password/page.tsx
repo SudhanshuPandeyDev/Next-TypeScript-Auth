@@ -23,7 +23,7 @@ export default function ResetPasswordPage() {
       router.push("/login");
       return response;
     } catch (error: any) {
-      console.log(error)
+      console.log(error);
     } finally {
       setLoading(false);
     }
