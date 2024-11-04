@@ -20,6 +20,7 @@ export default function SignupPage() {
       setLoading(true);
       const response = await axios.post("/api/users/signup", user);
       router.push("/login");
+      return resposne;
     } catch (error: any) {
       console.log(error);
     } finally {
