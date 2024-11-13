@@ -2,6 +2,7 @@
 
 This is a user authentication system built using Next.js, TypeScript, MongoDB, and Mailtrap. The application allows users to register, login, and manage their accounts securely.
 
+## Link : https://www.linkedin.com/posts/sudhanshu-pandey-a28992231_nextjs-typescript-webdevelopment-activity-7259192408389636097-yvAH?utm_source=share&utm_medium=member_desktop
 ## Tech Stack
 
 - **Next.js**: A React framework for building server-side rendered applications.
